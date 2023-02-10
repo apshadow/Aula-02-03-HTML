@@ -1,0 +1,174 @@
+/* Reset CSS - resetar propriedade de todos os elementos da página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* elemento raiz - representa o elemento HTML mas com uma especificidade maior
+é dentro dele que criamos as variáveis
+Regra: --identificador: valor*/
+:root {
+  --color-light: #ffffff;
+  --color-dark: #333;
+  --color-pink: #dc143c;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-light);
+}
+
+a:hover {
+  color: var(--color-pink);
+  transition: 0.5s;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+}
+
+.header-title {
+  color: var(--color-light);
+  font-size: 40px;
+}
+
+.header-menu {
+  display: flex;
+}
+
+.header-menu li {
+  margin-left: 20px;
+}
+
+.header-menu a {
+  font-weight: 900;
+}
+/* fim header */
+
+/* hero */
+.hero {
+  width: 100%;
+  height: 70vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+    url(../images/pexels-felix-mittermeier-957002.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-light);
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 7vmin;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-size: 5vmin;
+  font-weight: 100;
+  margin-bottom: 60px;
+}
+
+.btn {
+  background-color: var(--color-pink);
+  padding: 10px 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 70px;
+  border: 2px solid var(--color-pink);
+  transition: 0.5s;
+}
+
+.btn:hover {
+  padding: 10px 50px;
+  background-color: transparent;
+  color: var(--color-pink);
+  border: 2px solid var(--color-pink);
+}
+/* fim hero */
+
+/* tour */
+
+.tour {
+  width: 80%;
+  min-height: 100vh;
+  margin: 60px auto;
+}
+
+.tour-title {
+  margin: 80px 0;
+  text-align: center;
+  font: 5vmin;
+  font-size: 30px;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card-item {
+  width: 42%;
+  text-align: center;
+  padding: 30px;
+  margin: 30px 0;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 1px 30px 1px #ccc;
+  transition: 0.5s;
+}
+
+.card-item:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card-item img {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.card-item h3 {
+  margin: 25px 0;
+  font-size: 3vmin;
+}
+
+.card-item p {
+  margin-bottom: 50px;
+  width: 80%;
+}
+/* fim tour */
+
+/* meio responsivo */
+@media (max-width: 850px) {
+  .card-item {
+    width: 95%;
+  }
+}
